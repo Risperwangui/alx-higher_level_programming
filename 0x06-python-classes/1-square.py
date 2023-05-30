@@ -5,5 +5,9 @@
 
 
 def __init__(self, size):
-    """This initializes a Square"""
+    """This initializes a Square
+    Args:
+        size (int): this is the size of a side of the square
+    Returns: None
+    """
     self.__size = size
