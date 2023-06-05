@@ -1,0 +1,48 @@
+``add_integer(a, b=98)`` adds 2 integers and returns the reults
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>>add_integer(1, 2)
+	3
+
+This function also works with floating point numbers.
+
+::
+	>>>add_integer(3.0, 2.0)
+	5
+
+	>>>add_integer(2.6, 1)
+	3
+By default, the second argument is 98
+
+::
+	>>>add_integer(1)
+	99
+If one of the arguments is either a non-float or a non-integer,it raises a TypeError
+::
+	>>>add_integer("ris", 2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>>add_integer(2, "ris")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+If both the arguments are non-floats and non-integers, a TypeError message is raised for the first argument only
+::
+	>>>add_integer("ris", "wan")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+If infnity is provided,function to fail
+::
+	>>>add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+When NAN is passed
+::
+	>>>add_integer(3, float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot onvert float NaN to integer
