@@ -1,0 +1,25 @@
+Usage of ``say_my_name(first_name,last_name="")
+================================================
+
+this prints My name is <first name> <last name>
+
+Import say_my_name from 3-say_my_name
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name('Ris', 'Wan')
+	My name is Ris Wan
+
+Now we test,
+===========
+
+	>>> say_my_name(45, 'Wangui')
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>>say_my_name('Wangui', 45)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>>say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing one requires position argument:'first_name
