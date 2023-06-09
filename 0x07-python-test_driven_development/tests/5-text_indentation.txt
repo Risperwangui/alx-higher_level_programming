@@ -1,0 +1,28 @@
+Usage of ``text_indentation(text)``
+==================================
+
+The function prints a text with 2 new lines after each of these characters: . ? :
+
+Import text_indententation from 5-text_indentation
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+	>>>text_indentation('What is your name? My name is: Ris Wan. Bye')
+	What is your name?
+	<BLANKLINE>
+	My name is:
+	<BLANKLINE>
+	Ris Wan.
+	<BLANKLINE>
+	Bye
+
+Now we test:
+============
+
+	>>> text_indentation(78)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+	
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
