@@ -1,4 +1,4 @@
-#1/usr/bin/node
+#!/usr/bin/node
 if (isNAN(process.argv[2]) || process.argv[2] === undefined) {
 	cosole.log('Not a number');
 } else {
