@@ -1,4 +1,4 @@
-#!/usr/binpython3
+#!/usr/bin/python3
 """this lists all state objects from the dataa=base"""
 
 import sqlalchemy
