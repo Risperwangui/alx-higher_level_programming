@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""this lists all state objects from the dataa=base"""
+"""
+this lists all state objects from the database
+"""
 
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sys import argv
-from model_state import Base, Statw
+from model_state import Base, State
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
