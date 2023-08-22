@@ -1,5 +1,5 @@
-#!/usr/binpython3
-"""this lists all state objects from the dataa=base"""
+#!/usr/bin/python3
+"""this lists all state objects from the database"""
 
 import sqlalchemy
 from sqlalchemy import create_engine
