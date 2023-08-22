@@ -5,7 +5,7 @@ import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sys import argv
-from model_state import Base, State
+from model_state import Base, Statw
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
@@ -14,7 +14,5 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for state in session.query(State).order_by(State.id):
-        print("{}: {}".format(state.id, state.name))
-    session.close()
-
+    for first_instance in session.query(State).filter(State.name.like('%a%')):
+        print(first_instance.id, first_instance.name, sep=": ")
