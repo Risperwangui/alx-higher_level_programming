@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     data = {'q': letter}
 
-    response = requests.port(url, data=data)
+    response = requests.post(url, data=data)
 
     try:
         parsed_response = response.json()
